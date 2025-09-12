@@ -1,0 +1,146 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban Board</title>
+    <title>📋 Kanban Board</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" type="module" defer></script>
+  </head>
+
+  <body>
+    <div class="main-grid">
+      <!-- Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle. -->
+      <div class="navigation-bar">
+        <nav class="navigation-wrapper">
+          <div class="">
+            <div class="logo">
+              <img src="assets/favicon.svg" alt="The Kanban logo" />
+              <span><h1>kanban</h1></span>
+              <span
+                ><button
+                  class="add-task-icon"
+                  id="add-task"
+                  aria-label="Add new task"
+                  title="Add new task"
+                >
+                  +
+                </button></span
+              >
+            </div>
+            <h4 class="hidden">ALL BOARDS (1)</h4>
+          </div>
+          <button class="btn-primary hidden">Launch Career</button>
+        </nav>
+      </div>
+
+      <!-- Main Layout: Header with board title, add task button, and main content area for task columns. -->
+      <div class="task-bar">
+        <header>
+          <div class="task-grid-header hidden">
+            <h2 class="task-grid-header">
+              Launch Careers
+              <span
+                ><button class="new-task-button" id="add-task-desktop">
+                  + Add New Task
+                </button></span
+              >
+            </h2>
+          </div>
+        </header>
+
+        <div>
+          <main class="task-grid">
+            <!-- Task Columns: Display tasks grouped by status (TODO, DOING, DONE). -->
+            <div class="task-board">
+              <div class="task-board-name">
+                <span class="ball ball-1"></span>
+                <h4>TODO <span id="todo-counter"></span></h4>
+              </div>
+              <!-- Tasks container for TODO -->
+              <div id="todo-list"></div>
+            </div>
+            <!-- DOING Column -->
+            <div class="task-board">
+              <div class="task-board-name">
+                <span class="ball ball-2"></span>
+                <h4>DOING <span id="doing-counter"></span></h4>
+              </div>
+              <!-- Tasks container for DOING -->
+              <div id="doing-list"></div>
+            </div>
+            <!-- DONE Column -->
+            <div class="task-board">
+              <div class="task-board-name">
+                <span class="ball ball-3"></span>
+                <h4>DONE <span id="done-counter"></span></h4>
+              </div>
+              <!-- Tasks container for DONE -->
+              <div id="done-list"></div>
+            </div>
+            <div class="overlay">
+              <div id="task-modal" class="modal">
+                <span class="modal-close">&times;</span>
+                <h3 class="modal-header">Task</h3>
+                <label for="task-name-field">Title</label>
+                <input type="text" name="task" id="task-name-field" />
+                <label for="task-description">Description</label>
+                <textarea
+                  name="task-description-box"
+                  id="task-description"
+                ></textarea>
+                <label for="task-status">Status</label>
+                <select name="task-status-dropdown" id="task-status">
+                  <option value="todo">Todo</option>
+                  <option value="doing">Doing</option>
+                  <option value="done">Done</option>
+                </select>
+              </div>
+            </div>
+            <div class="overlay" id="empty-modal">
+              <form class="new-modal modal">
+                <span class="modal-close">&times;</span>
+                <h3 class="modal-header">Task</h3>
+                <label for="new-task">Title</label>
+                <input
+                  type="text"
+                  name="task"
+                  id="new-task"
+                  placeholder="e.g Take chilled break"
+                  required
+                />
+                <label for="new-task-description">Description</label>
+                <textarea
+                  name="task-description-box"
+                  id="new-task-description"
+                  placeholder="e.g. Pet your dog, have a cup of coffee, dance to your favorite song and come back to crush this challenge."
+                  s
+                ></textarea>
+                <label for="new-task-status">Status</label>
+                <select
+                  name="new-task-status-dropdown"
+                  id="new-task-status"
+                  value="todo"
+                >
+                  <option value="todo">Todo</option>
+                  <option value="doing">Doing</option>
+                  <option value="done">Done</option>
+                </select>
+                <button id="create-btn" class="create-button">
+                  Create Task
+                </button>
+              </form>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
