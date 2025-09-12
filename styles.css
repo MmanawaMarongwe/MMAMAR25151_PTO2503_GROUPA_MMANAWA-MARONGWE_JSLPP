@@ -59,13 +59,17 @@ img {
   width: 40px;
 }
 
+.toggle-checkbox {
+  margin-top: 500px;
+}
+
 .logo {
   display: flex;
   gap: 10px;
 }
 
 .main-grid {
-  height: 1024px;
+  height: 800px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   border: solid 1px var(--light-lines);
@@ -97,6 +101,7 @@ img {
 .task-bar {
   grid-column: span 4;
   border-left: solid 1px var(--light-lines);
+  overflow: hidden;
 }
 
 .task-grid-header {
@@ -236,6 +241,80 @@ input {
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 10px;
+}
+
+.toggle-label {
+  position: absolute;
+  display: inline-block;
+  right: 12%;
+  background-color: #e4ebfa;
+  padding: 10px 60px 5px 45px;
+  width: 100px;
+  height: 35px;
+  margin-top: 500px;
+}
+
+.toggle-label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.circle .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 30%;
+  right: 0;
+  bottom: 0;
+  background-color: var(--main-purple);
+  transition: 0.4s;
+  width: 60px;
+  height: 30px;
+  border-radius: 50px;
+  margin-top: 10px;
+}
+
+.circle .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Sun on the left — always visible */
+.toggle-label::before {
+  content: "☀️";
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Moon on the right — always visible */
+.toggle-label::after {
+  content: "🌑";
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  line-height: 1;
+}
+
+.circle input:checked + .slider {
+  background-color: var(--dark-grey);
+}
+
+.circle input:checked + .slider:before {
+  transform: translateX(30px);
 }
 
 @media (max-width: 768px) {
