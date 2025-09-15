@@ -56,7 +56,8 @@ p {
 }
 
 img {
-  width: 40px;
+  width: 150px;
+  margin: 10px 0px 40px 0px;
 }
 
 .toggle-checkbox {
@@ -251,7 +252,8 @@ input {
   padding: 10px 60px 5px 45px;
   width: 100px;
   height: 35px;
-  margin-top: 500px;
+  margin-top: 465px;
+  border-radius: 5px;
 }
 
 .toggle-label input {
@@ -315,6 +317,13 @@ input {
 
 .circle input:checked + .slider:before {
   transform: translateX(30px);
+}
+
+.white-border {
+  border: 1px solid rgb(255, 255, 255);
+}
+.purple-border {
+  border: 1px solid var(--main-purple);
 }
 
 @media (max-width: 768px) {

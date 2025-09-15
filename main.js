@@ -1,5 +1,6 @@
 import { renderTasks } from "./modules/userInterface.js";
 import { AddNewTask, addTaskBtn } from "./modules/AddNewTask.js";
+import { changeTheme, bgColorBtn } from "./modules/changeTheme.js";
 import {
   OpenEmptyModal,
   newTaskBtnDesk,
@@ -7,6 +8,8 @@ import {
   closeModal,
   modalCloseBtn,
 } from "./modules/NewTaskModal.js";
+
+bgColorBtn.addEventListener("change", changeTheme);
 
 renderTasks();
 

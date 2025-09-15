@@ -22,8 +22,7 @@
         <nav class="navigation-wrapper">
           <div class="">
             <div class="logo">
-              <img src="assets/favicon.svg" alt="The Kanban logo" />
-              <span><h1>kanban</h1></span>
+              <img src="assets/logo-light.svg" alt="The Kanban logo" />
               <span
                 ><button
                   class="add-task-icon"
@@ -51,7 +50,7 @@
       <div class="task-bar">
         <header>
           <div class="task-grid-header hidden">
-            <h2 class="task-grid-header">
+            <h2 class="task-grid-header" id="grid-header">
               Launch Careers
               <span
                 ><button class="new-task-button" id="add-task-desktop">
@@ -62,7 +61,7 @@
           </div>
         </header>
 
-        <div>
+        <div id="task-grid-container">
           <main class="task-grid">
             <!-- Task Columns: Display tasks grouped by status (TODO, DOING, DONE). -->
             <div class="task-board">
