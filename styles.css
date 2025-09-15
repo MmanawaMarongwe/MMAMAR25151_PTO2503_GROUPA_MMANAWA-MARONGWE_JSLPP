@@ -99,6 +99,48 @@ img {
   border: 1px solid var(--white);
 }
 
+.hide-sidebar {
+  position: absolute;
+  color: var(--white);
+  left: -10%;
+  background-color: var(--main-purple);
+  padding: 15px 75px;
+  border-radius: 50px;
+  border: 1px solid var(--white);
+  margin-top: 550px;
+}
+
+.hide-sidebar::before {
+  content: "🚫";
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  line-height: 1;
+}
+
+.side-bar-hidden {
+  position: absolute;
+  color: var(--white);
+  left: -10%;
+  background-color: var(--main-purple);
+  padding: 15px 30px;
+  border-radius: 50px;
+  border: 1px solid var(--white);
+  margin-top: 550px;
+}
+
+.side-bar-hidden::before {
+  content: "👀";
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  line-height: 1;
+}
+
 .task-bar {
   grid-column: span 4;
   border-left: solid 1px var(--light-lines);
