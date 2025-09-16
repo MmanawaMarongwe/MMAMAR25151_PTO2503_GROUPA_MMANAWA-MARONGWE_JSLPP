@@ -120,7 +120,7 @@ img {
   line-height: 1;
 }
 
-.side-bar-hidden {
+.open-sidebar {
   position: absolute;
   color: var(--white);
   left: -10%;
@@ -131,7 +131,7 @@ img {
   margin-top: 550px;
 }
 
-.side-bar-hidden::before {
+.open-sidebar::before {
   content: "👀";
   position: absolute;
   left: 40px;
@@ -366,6 +366,10 @@ input {
 }
 .purple-border {
   border: 1px solid var(--main-purple);
+}
+
+.hidden {
+  display: none;
 }
 
 @media (max-width: 768px) {
