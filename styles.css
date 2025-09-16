@@ -124,8 +124,8 @@ img {
   position: absolute;
   color: var(--white);
   left: -10%;
-  background-color: var(--main-purple);
-  padding: 15px 30px;
+  background-color: var(--light-lines);
+  padding: 25px 50px;
   border-radius: 50px;
   border: 1px solid var(--white);
   margin-top: 550px;
