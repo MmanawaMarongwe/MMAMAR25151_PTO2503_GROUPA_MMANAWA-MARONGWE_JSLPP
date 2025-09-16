@@ -74,6 +74,7 @@ img {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   border: solid 1px var(--light-lines);
+  overflow: hidden;
 }
 
 .navigation-bar {
@@ -121,14 +122,16 @@ img {
 }
 
 .open-sidebar {
+  display: block;
   position: absolute;
   color: var(--white);
-  left: -10%;
+  left: -3%;
   background-color: var(--light-lines);
   padding: 25px 50px;
   border-radius: 50px;
   border: 1px solid var(--white);
   margin-top: 550px;
+  overflow: hidden;
 }
 
 .open-sidebar::before {
@@ -170,6 +173,8 @@ img {
   background-color: var(--light-grey);
   gap: 10px;
   padding: 20px 40px 689px 40px;
+  position: relative;
+  overflow: hidden;
 }
 
 .task-board-name {
@@ -368,7 +373,7 @@ input {
   border: 1px solid var(--main-purple);
 }
 
-.hidden {
+.button-hidden {
   display: none;
 }
 

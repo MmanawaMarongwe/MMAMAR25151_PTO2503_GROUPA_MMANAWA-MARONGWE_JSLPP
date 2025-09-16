@@ -1,15 +1,15 @@
-export const sidebarBtn = document.getElementById("sidebar-btn");
+export const clsNavBarBtn = document.getElementById("sidebar-btn");
 const navBar = document.getElementById("nav-bar");
+const opnNavBarBtn = document.getElementById("open-sidebar-btn");
 
 export const hideSidebar = () => {
-  if (sidebarBtn.classList.contains("hide-sidebar")) {
-    sidebarBtn.classList.remove("hide-sidebar");
-    sidebarBtn.classList.add("side-bar-hidden");
-    sidebarBtn.textContent = "";
+  if (clsNavBarBtn.classList.contains("hide-sidebar")) {
+    clsNavBarBtn.classList.remove("hide-sidebar");
+    clsNavBarBtn.classList.add("side-bar-hidden");
   } else {
-    sidebarBtn.classList.remove("side-bar-hidden");
-    sidebarBtn.classList.add("hide-sidebar");
-    sidebarBtn.textContent = "Hide Sidebar";
+    clsNavBarBtn.classList.remove("side-bar-hidden");
+    clsNavBarBtn.classList.add("hide-sidebar");
+    clsNavBarBtn.textContent = "Hide Sidebar";
   }
 
   if (navBar.classList.contains("navigation-bar")) {
@@ -18,4 +18,13 @@ export const hideSidebar = () => {
   } else {
     navBar.style.display = "";
   }
+
+  if (opnNavBarBtn.classList.contains("button-hidden")) {
+    opnNavBarBtn.classList.remove("button-hidden");
+    opnNavBarBtn.classList.add("open-sidebar");
+    console.dir(opnNavBarBtn);
+  } /* else {
+    opnNavBarBtn.classList.remove("open-sidebar");
+    opnNavBarBtn.classList.add("button-hidden");
+  }*/
 };
