@@ -5,6 +5,7 @@ const logoEl = document.querySelector("img");
 const headerEl = document.getElementById("grid-header");
 const themeToggleEl = document.getElementsByClassName("toggle-label")[0];
 const allButtons = document.querySelectorAll("button");
+const clsNavBarBtn = document.getElementById("sidebar-btn");
 
 export const changeTheme = () => {
   if (pageBody.style.backgroundColor === "rgb(43, 44, 55)") {
@@ -44,4 +45,11 @@ export const changeTheme = () => {
       btn.style.border = "1px solid rgb(99, 95, 199)";
     }
   });
+  if (clsNavBarBtn.style.backgroundColor === "rgb(99, 95, 199)") {
+    clsNavBarBtn.style.backgroundColor = "rgb(244,247,253)";
+    clsNavBarBtn.style.color = "rgb(99, 95, 199)";
+  } else {
+    clsNavBarBtn.style.backgroundColor = "rgb(99, 95, 199)";
+    clsNavBarBtn.style.color = "rgb(244,247,253)";
+  }
 };
