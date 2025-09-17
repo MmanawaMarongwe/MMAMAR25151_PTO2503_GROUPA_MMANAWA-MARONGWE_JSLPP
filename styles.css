@@ -260,8 +260,28 @@ input {
   width: 100%;
 }
 
+.update-task-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.update-button {
+  font-size: 13px;
+  color: var(--white);
+  background-color: var(--main-purple);
+  gap: 20px;
+  padding: 10px 50px;
+  border-radius: 50px;
+  border: 1px solid var(--white);
+  margin-left: 10px;
+}
+
+#delete-task {
+  background-color: var(--red);
+}
 .create-button {
   width: 100%;
+  font-size: 13px;
   color: var(--white);
   background-color: var(--main-purple);
   padding: 10px 75px;

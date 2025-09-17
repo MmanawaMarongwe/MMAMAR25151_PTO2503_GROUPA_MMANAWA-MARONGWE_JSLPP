@@ -1,4 +1,4 @@
-import { displayTaskInModal } from "./ExistingTaskModal.js";
+import { displayTaskInModal } from "./updateTaskModal.js";
 import { countTasks } from "./taskCounter.js";
 import { bgColorBtn } from "./changeTheme.js";
 
