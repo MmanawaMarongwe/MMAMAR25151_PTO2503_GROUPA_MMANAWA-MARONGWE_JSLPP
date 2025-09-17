@@ -1,7 +1,12 @@
 import { renderTasks } from "./modules/userInterface.js";
 import { AddNewTask, addTaskBtn } from "./modules/AddNewTask.js";
 import { changeTheme, bgColorBtn } from "./modules/changeTheme.js";
-import { hideSidebar, clsNavBarBtn } from "./modules/hideSideBar.js";
+import {
+  hideSidebar,
+  clsNavBarBtn,
+  opnNavBarBtn,
+  openSidebar,
+} from "./modules/hideSideBar.js";
 import {
   OpenEmptyModal,
   newTaskBtnDesk,
@@ -12,6 +17,7 @@ import {
 
 bgColorBtn.addEventListener("change", changeTheme);
 clsNavBarBtn.addEventListener("click", hideSidebar);
+opnNavBarBtn.addEventListener("click", openSidebar);
 
 renderTasks();
 
