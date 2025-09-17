@@ -13,6 +13,13 @@
   --red-hover: #ff9898;
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
 h4,
 h3,
 h2,
@@ -52,16 +59,12 @@ select {
 
 p {
   font-weight: 600;
-  font-size: 10px;
+  font-size: 14px;
 }
 
 img {
   width: 150px;
   margin: 10px 0px 40px 0px;
-}
-
-.toggle-checkbox {
-  margin-top: 500px;
 }
 
 .logo {
@@ -70,11 +73,10 @@ img {
 }
 
 .main-grid {
-  height: 800px;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   border: solid 1px var(--light-lines);
-  overflow: hidden;
 }
 
 .navigation-bar {
@@ -94,18 +96,19 @@ img {
   position: absolute;
   left: -10%;
   color: var(--white);
+  font-size: 13px;
   background-color: var(--main-purple);
-  padding: 15px 75px;
-  border-radius: 50px;
+  padding: 20px 93px;
+  border-radius: 100px;
   border: 1px solid var(--white);
 }
 
 .hide-sidebar {
   position: absolute;
-  color: var(--white);
+  color: var(--main-purple);
   left: -10%;
-  background-color: var(--main-purple);
-  padding: 15px 75px;
+  background-color: var(--light-grey);
+  padding: 15px 93px;
   border-radius: 50px;
   border: 1px solid var(--white);
   margin-top: 550px;
@@ -147,7 +150,7 @@ img {
 .task-bar {
   grid-column: span 4;
   border-left: solid 1px var(--light-lines);
-  overflow: hidden;
+  overflow: auto;
 }
 
 .task-grid-header {
@@ -167,12 +170,13 @@ img {
 }
 
 .task-grid {
+  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border-top: solid 1px var(--light-lines);
   background-color: var(--light-grey);
   gap: 10px;
-  padding: 20px 40px 689px 40px;
+  padding: 20px 40px 40px 40px;
   position: relative;
   overflow: hidden;
 }
@@ -204,12 +208,12 @@ img {
 .task-name {
   background-color: #ffffff;
   margin: 10px;
-  padding: 5px 5px 5px 15px;
-  border-radius: 8px;
+  padding: 8px 16px;
+  border-radius: 16px;
   box-shadow: 0 6px 12px #364e7e33;
 }
 
-.btn-primary:hover {
+button:hover {
   background-color: var(--hover-purple);
 }
 
@@ -294,10 +298,10 @@ input {
 .toggle-label {
   position: absolute;
   display: inline-block;
-  right: 12%;
-  background-color: #e4ebfa;
+  right: 10%;
+  background-color: var(--light-grey);
   padding: 10px 60px 5px 45px;
-  width: 100px;
+  width: 125px;
   height: 35px;
   margin-top: 465px;
   border-radius: 5px;
@@ -377,7 +381,11 @@ input {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
+  p {
+    font-size: 10px;
+  }
+
   .main-grid {
     display: flex;
     flex-direction: column;
@@ -386,24 +394,31 @@ input {
 
   .logo {
     position: static;
+    margin-top: 5px;
   }
 
   .navigation-bar {
     display: flex;
     align-items: center;
-    padding: 30px;
+  }
+
+  .task-name {
+    padding: px 8px;
+    border-radius: 8px;
   }
 
   /* Show the small '+' in the nav */
   .add-task-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
     display: inline;
     color: var(--white);
-    margin-left: 110px;
     background-color: var(--main-purple);
     padding: 10px 15px;
-    justify-items: center;
-    margin-top: 15px;
     border-radius: 75%;
+    margin-right: 20px;
+    margin-top: 15px;
     border: 1px solid var(--white);
   }
 
@@ -414,6 +429,7 @@ input {
   .task-grid {
     display: flex;
     flex-direction: column;
+    overflow: visible;
   }
   .modal {
     background-color: var(--white);
@@ -428,11 +444,20 @@ input {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1023px) {
+@media (min-width: 821px) and (max-width: 1024px) {
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    overflow: auto;
+  }
   .main-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    height: 100%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .new-task-button {
+    left: 80%;
   }
 
   .navigation-bar {
@@ -440,34 +465,48 @@ input {
   }
 
   .task-bar {
-    grid-column: span 2;
+    grid-column: span 3;
   }
 
+  .btn-primary {
+    left: -15%;
+  }
+  .toggle-label {
+    margin-top: 450px;
+    right: 7%;
+  }
+  .hide-sidebar {
+    margin-top: 510px;
+    padding: 20px 90px;
+  }
   .task-grid {
     height: 100%;
   }
 }
 
-@media (min-width: 1023px) and (max-width: 1024px) {
+@media (min-width: 1025px) and (max-width: 1280px) {
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    overflow: auto;
+  }
   .main-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    height: 100%;
+    grid-template-columns: repeat(8, 1fr);
   }
 
   .navigation-bar {
-    grid-column: span 1;
-  }
-
-  .task-bar {
     grid-column: span 2;
   }
 
-  .btn-primary {
-    left: -10%;
-    padding: 10px 80px;
+  .task-bar {
+    grid-column: span 6;
   }
 
+  .toggle-label {
+    right: 17%;
+  }
   .task-grid {
     height: 100%;
   }
