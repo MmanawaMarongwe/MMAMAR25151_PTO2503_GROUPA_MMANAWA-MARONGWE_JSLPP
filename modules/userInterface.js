@@ -25,6 +25,7 @@ export const tasks = getTasks();
  * @returns {HTMLDivElement} - The created task card
  */
 export function renderTasks() {
+  const tasks = getTasks();
   document.getElementById("todo-list").innerHTML = "";
   document.getElementById("doing-list").innerHTML = "";
   document.getElementById("done-list").innerHTML = "";
