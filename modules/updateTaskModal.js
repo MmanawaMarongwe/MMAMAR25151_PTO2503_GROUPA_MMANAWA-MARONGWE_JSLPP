@@ -5,6 +5,7 @@ const modalTitle = document.getElementById("task-name-field");
 const modalDesc = document.getElementById("task-description");
 const modalStatus = document.getElementById("task-status");
 const saveBtn = document.getElementById("update-task-btn");
+const dltBtn = document.getElementById("delete-task");
 
 /**
  * Shows the task data inside the modal
@@ -22,6 +23,7 @@ export function displayTaskInModal(task) {
   modal.style.display = "flex";
 
   saveBtn.addEventListener("click", saveTaskChanges);
+  dltBtn.addEventListener("click", deleteTask);
 }
 
 modalCloseBtn.addEventListener("click", () => {
@@ -48,14 +50,15 @@ function saveTaskChanges() {
   renderTasks();
 }
 
-/*get id from modal.dataset.id
-    load tasks array from localStorage
-    find the task in tasks array with matching id
-    
-    update that task’s title = value from title input
-    update that task’s description = value from description textarea
-    update that task’s status = value from status dropdown
+function deleteTask() {
+  const id = Number(modal.dataset.id);
+  let tasks = getTasks();
+  const i = tasks.findIndex((task) => task.id === id);
+  if (i === -1) return; // task not found, bail
 
-    save updated tasks array back to localStorage
-    re-render the task board
-    hide the modal overlay*/
+  tasks = tasks.filter((task) => task.id !== id);
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+  console.log(tasks);
+  modal.style.display = "none";
+  renderTasks();
+}
