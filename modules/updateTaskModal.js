@@ -56,9 +56,16 @@ function deleteTask() {
   const i = tasks.findIndex((task) => task.id === id);
   if (i === -1) return; // task not found, bail
 
+  const confirmed = confirm("Are you sure you want to delete this task?");
+
+  if (!confirmed) {
+    modal.style.display = "none";
+    return;
+  }
+
   tasks = tasks.filter((task) => task.id !== id);
   localStorage.setItem("tasks", JSON.stringify(tasks));
+  renderTasks();
   console.log(tasks);
   modal.style.display = "none";
-  renderTasks();
 }

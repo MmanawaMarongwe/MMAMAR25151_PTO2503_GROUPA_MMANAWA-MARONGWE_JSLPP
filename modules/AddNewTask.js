@@ -1,11 +1,10 @@
-import { initialTasks } from "./initialData.js";
-import { renderTasks, tasks } from "./userInterface.js";
+import { renderTasks, getTasks } from "./userInterface.js";
 
 const modalTitle = document.getElementById("new-task");
 const modalDesc = document.getElementById("new-task-description");
 const modalStatus = document.getElementById("new-task-status");
 export const addTaskBtn = document.getElementById("create-btn");
-
+const tasks = getTasks();
 /**
  * Generates the next unique task ID.
  *
@@ -16,7 +15,7 @@ export const addTaskBtn = document.getElementById("create-btn");
  */
 function getNextId() {
   //get the last object in the array and use it to get the next id
-  const lastObject = initialTasks[initialTasks.length - 1];
+  const lastObject = tasks[tasks.length - 1];
   const lastId = lastObject.id;
   const nextId = lastId + 1;
 
