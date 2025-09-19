@@ -297,7 +297,7 @@ input {
 .overlay {
   position: fixed;
   inset: 0; /* stretch full viewport */
-  background: rgba(0, 0, 0, 0.5); /* dim background */
+  background: rgba(0, 0, 0, 0.65); /* dim background */
   display: none; /* hidden by default */
   justify-content: center; /* center modal horizontally */
   align-items: center; /* center modal vertically */

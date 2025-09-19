@@ -5,6 +5,7 @@ const logoEl = document.querySelector("img");
 const headerEl = document.getElementById("grid-header");
 const themeToggleEl = document.getElementsByClassName("toggle-label")[0];
 const allButtons = document.querySelectorAll("button");
+const modals = document.querySelectorAll(".modal");
 const clsNavBarBtn = document.getElementById("sidebar-btn");
 
 export const changeTheme = () => {
@@ -38,6 +39,14 @@ export const changeTheme = () => {
   } else {
     themeToggleEl.style.backgroundColor = "rgb(99, 95, 199)";
   }
+  modals.forEach((modal) => {
+    if (modal.style.backgroundColor === "rgb(32, 33, 44)") {
+      modal.style.backgroundColor = "rgb(255, 255, 255)";
+    } else {
+      modal.style.backgroundColor = "rgb(32, 33, 44)";
+    }
+  });
+
   allButtons.forEach((btn) => {
     if (btn.style.border === "1px solid rgb(99, 95, 199)") {
       btn.style.border = "1px solid rgb(255, 255, 255)";
@@ -45,6 +54,7 @@ export const changeTheme = () => {
       btn.style.border = "1px solid rgb(99, 95, 199)";
     }
   });
+
   if (clsNavBarBtn.style.backgroundColor === "rgb(99, 95, 199)") {
     clsNavBarBtn.style.backgroundColor = "rgb(244,247,253)";
     clsNavBarBtn.style.color = "rgb(99, 95, 199)";
@@ -52,4 +62,6 @@ export const changeTheme = () => {
     clsNavBarBtn.style.backgroundColor = "rgb(99, 95, 199)";
     clsNavBarBtn.style.color = "rgb(244,247,253)";
   }
+
+  console.dir(modals);
 };
