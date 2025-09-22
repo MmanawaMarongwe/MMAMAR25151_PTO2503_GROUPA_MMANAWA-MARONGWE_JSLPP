@@ -1,5 +1,6 @@
 import { displayTaskInModal } from "./updateTaskModal.js";
 import { countTasks } from "./taskCounter.js";
+import { bgColorBtn } from "./changeTheme.js";
 
 /**
  * Creates a task card element containing the task title
@@ -17,5 +18,15 @@ export function createTask(task) {
   taskCard.appendChild(taskTitle);
   countTasks();
   taskCard.addEventListener("click", () => displayTaskInModal(task));
+  bgColorBtn.addEventListener("change", () => {
+    if (taskCard.style.backgroundColor == "rgb(44, 44, 55)") {
+      taskCard.style.backgroundColor = "rgb(255, 255, 255)";
+      taskCard.style.color = "rgb(44, 44, 55)";
+    } else {
+      taskCard.style.backgroundColor = "rgb(44, 44, 55)";
+      taskCard.style.color = "rgb(255, 255, 255)";
+      taskCard.style.boxShadow = "none";
+    }
+  });
   return taskCard;
 }
