@@ -67,9 +67,11 @@ img {
   margin: 10px 0px 40px 0px;
 }
 
-/* ===============================
-   NAVIGATION BAR STYLING
-   =============================== */
+.logo img {
+  width: 150px;
+  height: 40px; /* lock height */
+  object-fit: contain;
+}
 
 .logo {
   display: flex;
