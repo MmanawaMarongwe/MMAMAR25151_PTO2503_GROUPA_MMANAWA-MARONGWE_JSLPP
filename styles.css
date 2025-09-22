@@ -456,7 +456,7 @@ html.dark .toggle-label {
   color: #f4f7fd;
 }
 
-.dark .modal .modal-content {
+html.dark .modal {
   background: #1f1f24;
   color: #ffffff;
 }
