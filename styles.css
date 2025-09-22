@@ -115,7 +115,7 @@ img {
   padding: 15px 93px;
   border-radius: 50px;
   border: 1px solid var(--white);
-  margin-top: 550px;
+  margin-top: 500px;
 }
 
 .hide-sidebar::before {
@@ -133,10 +133,10 @@ img {
   display: inline-block;
   right: 10%;
   background-color: var(--light-grey);
-  padding: 10px 60px 5px 45px;
+  padding: 10px 60px 5px 55px;
   width: 125px;
   height: 35px;
-  margin-top: 465px;
+  margin-top: 440px;
   border-radius: 5px;
 }
 
@@ -188,7 +188,7 @@ img {
 .toggle-label::after {
   content: "🌑";
   position: absolute;
-  right: 60px;
+  right: 75px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 16px;
@@ -572,7 +572,7 @@ html.dark .toggle-label {
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1280px) {
+@media (max-width: 1280px) {
   html,
   body {
     height: 100%;
