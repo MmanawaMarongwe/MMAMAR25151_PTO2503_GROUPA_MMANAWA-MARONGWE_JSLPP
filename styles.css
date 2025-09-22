@@ -67,6 +67,10 @@ img {
   margin: 10px 0px 40px 0px;
 }
 
+/* ===============================
+   NAVIGATION BAR STYLING
+   =============================== */
+
 .logo {
   display: flex;
   gap: 10px;
@@ -103,6 +107,81 @@ img {
   border: 1px solid var(--white);
 }
 
+.toggle-label {
+  position: absolute;
+  display: inline-block;
+  right: 10%;
+  background-color: var(--light-grey);
+  padding: 10px 60px 5px 45px;
+  width: 125px;
+  height: 35px;
+  margin-top: 440px;
+  border-radius: 5px;
+}
+
+.toggle-label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.circle .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 30%;
+  right: 0;
+  bottom: 0;
+  background-color: var(--main-purple);
+  transition: 0.4s;
+  width: 60px;
+  height: 30px;
+  border-radius: 50px;
+  margin-top: 10px;
+}
+
+.circle .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Sun on the left — always visible */
+.toggle-label::before {
+  content: "☀️";
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Moon on the right — always visible */
+.toggle-label::after {
+  content: "🌑";
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  line-height: 1;
+}
+
+.circle input:checked + .slider {
+  background-color: var(--dark-grey);
+}
+
+.circle input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
 .hide-sidebar {
   position: absolute;
   color: var(--main-purple);
@@ -111,7 +190,7 @@ img {
   padding: 15px 93px;
   border-radius: 50px;
   border: 1px solid var(--white);
-  margin-top: 550px;
+  margin-top: 500px;
 }
 
 .hide-sidebar::before {
@@ -147,16 +226,23 @@ img {
   line-height: 1;
 }
 
+/* ===============================
+   TASK BAR STYLING
+  =============================== */
 .task-bar {
   grid-column: span 4;
   border-left: solid 1px var(--light-lines);
   overflow: auto;
 }
 
-.task-grid-header {
+.task-grid-header-container {
   padding-top: 5px;
   padding-bottom: 5px;
   margin-left: 25px;
+}
+
+h2 .task-grid-header {
+  color: var(--very-dark-grey);
 }
 
 .new-task-button {
@@ -170,13 +256,16 @@ img {
 }
 
 .task-grid {
-  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-top: solid 1px var(--light-lines);
-  background-color: var(--light-grey);
   gap: 10px;
   padding: 20px 40px 40px 40px;
+}
+
+.task-grid-container {
+  min-height: 100vh;
+  background-color: var(--light-grey);
+  border-top: solid 1px var(--light-lines);
   position: relative;
   overflow: hidden;
 }
@@ -216,6 +305,10 @@ img {
 button:hover {
   background-color: var(--hover-purple);
 }
+
+/* ===============================
+   MODAL STYLING
+=============================== */
 
 .modal-header,
 input,
@@ -315,81 +408,6 @@ input {
   border-radius: 10px;
 }
 
-.toggle-label {
-  position: absolute;
-  display: inline-block;
-  right: 10%;
-  background-color: var(--light-grey);
-  padding: 10px 60px 5px 45px;
-  width: 125px;
-  height: 35px;
-  margin-top: 465px;
-  border-radius: 5px;
-}
-
-.toggle-label input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.circle .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 30%;
-  right: 0;
-  bottom: 0;
-  background-color: var(--main-purple);
-  transition: 0.4s;
-  width: 60px;
-  height: 30px;
-  border-radius: 50px;
-  margin-top: 10px;
-}
-
-.circle .slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 2px;
-  bottom: 2px;
-  background-color: white;
-  transition: 0.4s;
-  border-radius: 50%;
-}
-
-/* Sun on the left — always visible */
-.toggle-label::before {
-  content: "☀️";
-  position: absolute;
-  left: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 16px;
-  line-height: 1;
-}
-
-/* Moon on the right — always visible */
-.toggle-label::after {
-  content: "🌑";
-  position: absolute;
-  right: 60px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 16px;
-  line-height: 1;
-}
-
-.circle input:checked + .slider {
-  background-color: var(--dark-grey);
-}
-
-.circle input:checked + .slider:before {
-  transform: translateX(30px);
-}
-
 .white-border {
   border: 1px solid rgb(255, 255, 255);
 }
@@ -400,6 +418,53 @@ input {
 .button-hidden {
   display: none;
 }
+
+/* ===============================
+   DARK MODE 
+   =============================== */
+
+/* Dark mode overrides */
+.dark .main-grid {
+  background: rgb(43, 44, 55);
+  color: #ffffff;
+}
+
+html.dark .task-grid-container {
+  background: rgb(32, 33, 44);
+}
+
+html.dark .task-name {
+  background: rgb(44, 44, 55);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+h2 .task-grid-header .dark {
+  color: var(--white);
+}
+
+html.dark .toggle-label {
+  background: rgb(99, 95, 199); /* purple */
+}
+
+.dark button {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.dark #sidebar-btn {
+  background: rgb(99, 95, 199);
+  color: #f4f7fd;
+}
+
+.dark .modal .modal-content {
+  background: #1f1f24;
+  color: #ffffff;
+}
+
+/* ===============================
+   MOBILE STYLING
+   =============================== */
 
 @media (max-width: 820px) {
   p {
@@ -510,7 +575,7 @@ input {
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1280px) {
+@media (max-width: 1280px) {
   html,
   body {
     height: 100%;
