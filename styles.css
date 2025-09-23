@@ -62,20 +62,11 @@ p {
   font-size: 14px;
 }
 
-img {
-  width: 150px;
-  margin: 10px 0px 40px 0px;
-}
-
 .logo img {
   width: 150px;
   height: 40px; /* lock height */
   object-fit: contain;
-}
-
-.logo {
-  display: flex;
-  gap: 10px;
+  margin: 10px 0px 40px 0px;
 }
 
 .main-grid {
@@ -94,7 +85,7 @@ img {
   overflow: hidden;
 }
 
-.add-task-icon {
+.mobile-header {
   display: none; /* hidden on desktop */
 }
 
@@ -476,18 +467,36 @@ html.dark .modal {
     height: 100%;
   }
 
-  .logo {
-    position: static;
-    margin-top: 5px;
+  .mobile-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
+  .mobile-header-icon {
+    display: flex;
+    justify-items: center;
+  }
+
+  .logo {
+    position: static;
+    padding: 0;
+  }
+
+  img.mobile-logo {
+    display: flex;
+    margin-left: 0;
+    width: 100px;
+    margin-bottom: 25px;
+  }
   .navigation-bar {
     display: flex;
     align-items: center;
   }
 
   .task-name {
-    padding: px 8px;
+    padding: 8px;
     border-radius: 8px;
   }
 
@@ -496,13 +505,15 @@ html.dark .modal {
     position: absolute;
     top: 0;
     right: 0;
-    display: inline;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--white);
     background-color: var(--main-purple);
-    padding: 10px 15px;
-    border-radius: 75%;
+    padding: 15px 20px;
+    border-radius: 50%;
     margin-right: 20px;
-    margin-top: 15px;
+    margin-top: 20px;
     border: 1px solid var(--white);
   }
 
@@ -574,7 +585,7 @@ html.dark .modal {
   }
 }
 
-@media (max-width: 1280px) {
+@media (width: 1280px) {
   html,
   body {
     height: 100%;
