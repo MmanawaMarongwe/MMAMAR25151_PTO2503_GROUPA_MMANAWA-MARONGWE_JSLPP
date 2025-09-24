@@ -18,50 +18,50 @@
   <body>
     <div class="main-grid dark" id="main-container">
       <!-- Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle. -->
-      <div class="navigation-bar" id="nav-bar">
-        <nav class="navigation-wrapper">
-          <div class="">
-            <div class="logo">
+      <nav class="navigation-bar" id="nav-bar">
+        <div class="logo">
+          <img
+            src="assets/logo-light.svg"
+            alt="The Kanban logo"
+            id="img-logo"
+            class="hidden"
+          />
+          <div class="mobile-header">
+            <div class="mobile-header-icon" id="nav-bar-open">
               <img
-                src="assets/logo-light.svg"
-                alt="The Kanban logo"
-                id="img-logo"
-                class="hidden"
+                src="assets/favicon-dark.svg"
+                alt=""
+                class="mobile-logo"
+                id="logo"
               />
-              <div class="mobile-header">
-                <div class="mobile-header-icon">
-                  <img
-                    src="assets/favicon-dark.svg"
-                    alt=""
-                    class="mobile-logo"
-                  />
-                </div>
-                <div class="mobile-header-icon">
-                  <button
-                    class="add-task-icon dark"
-                    id="add-task"
-                    aria-label="Add new task"
-                    title="Add new task"
-                  >
-                    +
-                  </button>
-                </div>
-              </div>
             </div>
-            <h4 class="hidden">ALL BOARDS (1)</h4>
+            <div class="mobile-header-icon">
+              <button
+                class="add-task-icon dark"
+                id="add-task"
+                aria-label="Add new task"
+                title="Add new task"
+              >
+                +
+              </button>
+            </div>
           </div>
-          <button class="btn-primary hidden dark">Launch Career</button>
+        </div>
+        <div class="nav-content">
+          <span class="modal-close-mobile">&times;</span>
+          <h4>ALL BOARDS (1)</h4>
+          <button class="btn-primary dark">Launch Career</button>
           <label for="theme-toggle" class="toggle-label circle dark">
             <input
               type="checkbox"
               id="theme-toggle"
               class="toggle-checkbox slider" /><span class="slider"></span
           ></label>
-          <button class="hide-sidebar dark" id="sidebar-btn">
+          <button class="hide-sidebar dark hidden" id="sidebar-btn">
             Hide Sidebar
           </button>
-        </nav>
-      </div>
+        </div>
+      </nav>
 
       <!-- Main Layout: Header with board title, add task button, and main content area for task columns. -->
       <div class="task-bar">
@@ -173,6 +173,7 @@
               class="open-sidebar button-hidden dark"
               id="open-sidebar-btn"
             ></button>
+            <div id="nav-menu-overlay" class="overlay"></div>
           </main>
         </div>
       </div>

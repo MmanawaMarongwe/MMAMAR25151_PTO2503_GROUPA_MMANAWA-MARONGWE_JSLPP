@@ -14,6 +14,16 @@ import {
   closeModal,
   modalCloseBtn,
 } from "./modules/NewTaskModal.js";
+import { openNav, closeNav, navBar } from "./modules/openNavbar.js";
+
+const openBtn = document.getElementById("logo"); // your mobile logo container
+
+if (openBtn) {
+  openBtn.addEventListener("click", () => {
+    if (navBar.classList.contains("nav-open")) closeNav();
+    else openNav();
+  });
+}
 
 bgColorBtn.addEventListener("change", changeTheme);
 clsNavBarBtn.addEventListener("click", hideSidebar);
