@@ -14,15 +14,23 @@ import {
   closeModal,
   modalCloseBtn,
 } from "./modules/NewTaskModal.js";
-import { openNav, closeNav, navBar } from "./modules/openNavbar.js";
+import {
+  openMToggle,
+  closeNav,
+  mToggle,
+  openNav,
+  clsMToggle,
+} from "./modules/openNavbar.js";
 
-const openBtn = document.getElementById("logo"); // your mobile logo container
-
-if (openBtn) {
-  openBtn.addEventListener("click", () => {
-    if (navBar.classList.contains("nav-open")) closeNav();
+if (openMToggle) {
+  openMToggle.addEventListener("click", () => {
+    if (mToggle.classList.contains("nav-open")) closeNav();
     else openNav();
   });
+}
+
+if (clsMToggle) {
+  clsMToggle.addEventListener("click", closeNav);
 }
 
 bgColorBtn.addEventListener("change", changeTheme);

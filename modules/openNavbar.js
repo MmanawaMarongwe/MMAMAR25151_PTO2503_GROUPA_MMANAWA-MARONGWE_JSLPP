@@ -1,16 +1,18 @@
 // Elements you already have
-export const navBar = document.getElementById("nav-bar");
+export const mToggle = document.getElementById("nav-bar");
+export const openMToggle = document.getElementById("nav-bar-open");
+export const clsMToggle = document.getElementById("close-mobile-toggle");
 const overlay = document.getElementById("nav-menu-overlay");
 
 export function openNav() {
-  if (navBar.classList.contains("nav-open")) return;
+  if (mToggle.classList.contains("nav-open")) return;
 
   // Mark nav as open
-  navBar.classList.add("nav-open");
+  mToggle.classList.add("nav-open");
   overlay.classList.add("is-open");
 }
 
 export function closeNav() {
-  navBar.classList.remove("nav-open");
+  mToggle.classList.remove("nav-open");
   overlay.classList.remove("is-open");
 }

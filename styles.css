@@ -29,14 +29,14 @@ h1,
 input,
 select,
 textarea,
-label,
-.modal-close {
+label {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 h1,
 .modal-close,
-h2 {
+h2,
+.modal-close-mobile {
   font-size: 24px;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
@@ -500,7 +500,7 @@ html.dark .modal {
     left: 50%;
     transform: translateX(-50%);
     width: 300px;
-    height: 300px;
+    height: 200px;
     overflow: auto;
     background: var(--white);
     border-radius: 12px;
