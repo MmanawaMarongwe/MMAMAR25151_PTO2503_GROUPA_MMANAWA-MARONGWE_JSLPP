@@ -29,7 +29,7 @@ export const hideSidebar = () => {
 
 export function openSidebar() {
   if (navBar.classList.contains("navigation-bar")) {
-    mainGrid.style.gridTemplateColumns = "repeat(5, 1fr)";
+    mainGrid.style.gridTemplateColumns = "repeat(8, 1fr)";
     navBar.style.display = "inline-block";
     console.dir(navBar);
   } else {
