@@ -485,6 +485,7 @@ html.dark .modal {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
   }
 
   /* Hide the menu content by default on mobile */
