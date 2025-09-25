@@ -130,7 +130,7 @@ textarea,
   padding: 0.9375rem 6.25rem;
   border-radius: 3.125rem;
   border: 0.0625rem solid var(--white);
-  margin-top: 53.75rem;
+  margin-top: 28.125rem;
 }
 
 .hide-sidebar::before {
@@ -151,7 +151,7 @@ textarea,
   padding: 0.625rem 3.75rem 0.3125rem 2.5rem;
   width: 9.375rem;
   height: 2.1875rem;
-  margin-top: 46.75rem;
+  margin-top: 23.75rem;
   border-radius: 0.3125rem;
 }
 
