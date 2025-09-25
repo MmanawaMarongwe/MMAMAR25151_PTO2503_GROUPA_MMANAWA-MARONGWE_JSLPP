@@ -37,55 +37,55 @@ h1,
 .modal-close,
 h2,
 .modal-close-mobile {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 h4,
 label {
-  font-size: 12px;
-  margin-left: 15px;
+  font-size: 0.75rem;
+  margin-left: 0.9375rem;
   color: var(--medium-grey);
-  /*letter-spacing: 3px;*/
+  letter-spacing: 0.1875rem;
 }
 
 h3,
 input,
 textarea,
 select {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--very-dark-grey);
 }
 
 p {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .main-grid {
   min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  border: solid 1px var(--light-lines);
+  border: solid 0.0625rem var(--light-lines);
 }
 
 .navigation-bar {
   grid-column: span 2;
   position: relative;
-  padding-left: 30px;
+  padding-left: 1.875rem;
   box-sizing: border-box;
   overflow: hidden;
 }
 
 .logo img {
-  width: 150px;
-  height: 40px; /* lock height */
+  width: 9.375rem;
+  height: 2.5rem; /* lock height */
   object-fit: contain;
-  margin-top: 28px;
+  margin-top: 1.75rem;
 }
 
 .nav-content {
-  margin: 50px 0px 50px 0;
+  margin: 3.125rem 0rem 3.125rem 0;
 }
 
 .mobile-header {
@@ -96,45 +96,45 @@ p {
   position: absolute;
   left: -10%;
   color: var(--white);
-  font-size: 15px;
+  font-size: 0.9375rem;
   background-color: var(--main-purple);
-  padding: 20px 100px;
-  border-radius: 100px;
-  border: 1px solid var(--white);
+  padding: 1.25rem 6.25rem;
+  border-radius: 6.25rem;
+  border: 0.0625rem solid var(--white);
 }
 
 .hide-sidebar {
   position: absolute;
   color: var(--main-purple);
   left: -10%;
-  font-size: 15px;
+  font-size: 0.9375rem;
   background-color: var(--light-grey);
-  padding: 15px 100px;
-  border-radius: 50px;
-  border: 1px solid var(--white);
-  margin-top: 450px;
+  padding: 0.9375rem 6.25rem;
+  border-radius: 3.125rem;
+  border: 0.0625rem solid var(--white);
+  margin-top: 28.125rem;
 }
 
 .hide-sidebar::before {
   content: "🚫";
   position: absolute;
-  left: 40px;
+  left: 2.5rem;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1;
 }
 
 .toggle-label {
   position: absolute;
   display: inline-block;
-  right: 15%;
+  right: 20%;
   background-color: var(--light-grey);
-  padding: 10px 60px 5px 40px;
-  width: 150px;
-  height: 35px;
-  margin-top: 380px;
-  border-radius: 5px;
+  padding: 0.625rem 3.75rem 0.3125rem 2.5rem;
+  width: 9.375rem;
+  height: 2.1875rem;
+  margin-top: 23.75rem;
+  border-radius: 0.3125rem;
 }
 
 .toggle-label input {
@@ -152,19 +152,19 @@ p {
   bottom: 0;
   background-color: var(--main-purple);
   transition: 0.4s;
-  width: 60px;
-  height: 30px;
-  border-radius: 50px;
-  margin-top: 10px;
+  width: 3.75rem;
+  height: 1.875rem;
+  border-radius: 3.125rem;
+  margin-top: 0.625rem;
 }
 
 .circle .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 2px;
-  bottom: 2px;
+  height: 1.625rem;
+  width: 1.625rem;
+  left: 0.125rem;
+  bottom: 0.125rem;
   background-color: white;
   transition: 0.4s;
   border-radius: 50%;
@@ -174,10 +174,10 @@ p {
 .toggle-label::before {
   content: "☀️";
   position: absolute;
-  left: 40px;
+  left: 2.5rem;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1;
 }
 
@@ -185,10 +185,10 @@ p {
 .toggle-label::after {
   content: "🌑";
   position: absolute;
-  right: 75px;
+  right: 4.6875rem;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1;
 }
 
@@ -197,7 +197,7 @@ p {
 }
 
 .circle input:checked + .slider:before {
-  transform: translateX(30px);
+  transform: translateX(1.875rem);
 }
 
 .open-sidebar {
@@ -206,20 +206,20 @@ p {
   color: var(--white);
   left: -3%;
   background-color: var(--light-lines);
-  padding: 25px 50px;
-  border-radius: 50px;
-  border: 1px solid var(--white);
-  margin-top: 500px;
+  padding: 1.5625rem 3.125rem;
+  border-radius: 3.125rem;
+  border: 0.0625rem solid var(--white);
+  margin-top: 31.25rem;
   overflow: hidden;
 }
 
 .open-sidebar::before {
   content: "👀";
   position: absolute;
-  left: 40px;
+  left: 2.5rem;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1;
 }
 
@@ -228,14 +228,14 @@ p {
    =============================== */
 .task-bar {
   grid-column: span 6;
-  border-left: solid 1px var(--light-lines);
+  border-left: solid 0.0625rem var(--light-lines);
   overflow: auto;
 }
 
 .task-grid-header {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-left: 25px;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-left: 1.5625rem;
 }
 
 h2 .task-grid-header {
@@ -247,19 +247,19 @@ h2 .task-grid-header {
   left: 85%;
   color: var(--white);
   background-color: var(--main-purple);
-  padding: 15px 25px;
-  border-radius: 50px;
-  border: 1px solid var(--white);
+  padding: 0.9375rem 1.5625rem;
+  border-radius: 3.125rem;
+  border: 0.0625rem solid var(--white);
 }
 
 .task-grid {
   min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-top: solid 1px var(--light-lines);
+  border-top: solid 0.0625rem var(--light-lines);
   background-color: var(--light-grey);
-  gap: 10px;
-  padding: 20px 40px 40px 40px;
+  gap: 0.625rem;
+  padding: 1.25rem 2.5rem 2.5rem 2.5rem;
   position: relative;
   overflow: hidden;
 }
@@ -270,9 +270,9 @@ h2 .task-grid-header {
 }
 
 .ball {
-  margin-left: 15px;
-  width: 10px;
-  height: 10px;
+  margin-left: 0.9375rem;
+  width: 0.625rem;
+  height: 0.625rem;
   border-radius: 50%;
 }
 
@@ -291,12 +291,12 @@ h2 .task-grid-header {
 .task-name {
   display: flex;
   align-items: center;
-  padding-left: 15px;
+  padding-left: 0.9375rem;
   background-color: #ffffff;
-  margin-bottom: 20px;
-  height: 60px;
-  border-radius: 16px;
-  box-shadow: 0 6px 12px #364e7e33;
+  margin-bottom: 1.25rem;
+  height: 3.75rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.375rem 0.75rem #364e7e33;
 }
 
 .task-name p {
@@ -304,13 +304,13 @@ h2 .task-grid-header {
   align-items: center;
   justify-content: space-between; /* <-- pushes text left, ball right */
   width: 100%; /* <-- ensures full width */
-  padding-right: 12px;
+  padding-right: 0.75rem;
 }
 
 .status-ball {
   display: inline-block;
-  width: 12px; /* adjust size */
-  height: 12px;
+  width: 0.75rem; /* adjust size */
+  height: 0.75rem;
   border-radius: 50%;
   vertical-align: middle;
 }
@@ -327,23 +327,23 @@ button:hover {
 input,
 select,
 .create-button {
-  margin: 10px 20px 5px 10px;
+  margin: 0.625rem 1.25rem 0.3125rem 0.625rem;
 }
 
 textarea {
-  padding: 10px;
+  padding: 0.625rem;
 }
 
 .modal-header {
-  padding: 5px;
+  padding: 0.3125rem;
 }
 
 select {
-  padding: 5px;
+  padding: 0.3125rem;
   height: auto; /* natural height for a single-line input */
   width: 100%; /* full width */
   text-transform: lowercase;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 option,
@@ -353,16 +353,16 @@ input {
 
 #task-name-field,
 #new-task {
-  margin-bottom: 30px;
-  padding: 8px 12px; /* comfortable padding inside */
+  margin-bottom: 1.875rem;
+  padding: 0.5rem 0.75rem; /* comfortable padding inside */
   height: auto; /* natural height for a single-line input */
   width: 100%; /*full width */
 }
 
 #task-description,
 #new-task-description {
-  margin: 10px 0px 30px 10px;
-  height: 100px; /* natural height for a single-line input */
+  margin: 0.625rem 0rem 1.875rem 0.625rem;
+  height: 6.25rem; /* natural height for a single-line input */
   width: 100%;
 }
 
@@ -372,14 +372,14 @@ input {
 }
 
 .update-button {
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--white);
   background-color: var(--main-purple);
-  gap: 20px;
-  padding: 10px 50px;
-  border-radius: 50px;
-  border: 1px solid var(--white);
-  margin-left: 10px;
+  gap: 1.25rem;
+  padding: 0.625rem 3.125rem;
+  border-radius: 3.125rem;
+  border: 0.0625rem solid var(--white);
+  margin-left: 0.625rem;
 }
 
 #delete-task {
@@ -387,12 +387,12 @@ input {
 }
 .create-button {
   width: 100%;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--white);
   background-color: var(--main-purple);
-  padding: 10px 75px;
-  border-radius: 50px;
-  border: 1px solid var(--white);
+  padding: 0.625rem 4.6875rem;
+  border-radius: 3.125rem;
+  border: 0.0625rem solid var(--white);
 }
 
 .modal-close {
@@ -411,21 +411,21 @@ input {
 
 .modal {
   background-color: var(--white);
-  width: 400px;
-  height: 450px;
-  padding: 10px 30px 30px 10px;
+  width: 25rem;
+  height: 28.125rem;
+  padding: 0.625rem 1.875rem 1.875rem 0.625rem;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 
 .white-border {
-  border: 1px solid rgb(255, 255, 255);
+  border: 0.0625rem solid rgb(255, 255, 255);
 }
 .purple-border {
-  border: 1px solid var(--main-purple);
+  border: 0.0625rem solid var(--main-purple);
 }
 
 .button-hidden,
@@ -462,7 +462,7 @@ html.dark .toggle-label {
 }
 
 .dark button {
-  border: 1px solid #ffffff;
+  border: 0.0625rem solid #ffffff;
   color: #ffffff;
 }
 
@@ -480,9 +480,9 @@ html.dark .modal {
    MOBILE STYLING
    =============================== */
 
-@media (max-width: 820px) {
+@media (max-width: 51.25rem) {
   p {
-    font-size: 10px;
+    font-size: 0.625rem;
   }
   .hidden {
     display: none;
@@ -505,7 +505,7 @@ html.dark .modal {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
   }
 
   /* Hide the menu content by default on mobile */
@@ -517,17 +517,17 @@ html.dark .modal {
   .navigation-bar.nav-open .nav-content {
     display: block;
     position: fixed; /* float above content */
-    top: 64px; /* adjust to your header height */
+    top: 4rem; /* adjust to your header height */
     left: 50%;
     transform: translateX(-50%);
-    width: 300px;
-    height: 200px;
+    width: 18.75rem;
+    height: 12.5rem;
     overflow: auto;
     background: var(--white);
-    border-radius: 12px;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    border-radius: 0.75rem;
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.25);
     z-index: 10000; /* above page, below overlay click area */
-    padding: 16px;
+    padding: 1rem;
   }
 
   html.dark .navigation-bar.nav-open .nav-content {
@@ -554,7 +554,7 @@ html.dark .modal {
   }
 
   .toggle-label {
-    margin-top: 100px;
+    margin-top: 6.25rem;
   }
   /* Lock background scroll while menu is open */
   body.modal-open {
@@ -564,13 +564,13 @@ html.dark .modal {
   img.mobile-logo {
     display: flex;
     margin-left: 0;
-    width: 100px;
-    margin-bottom: 25px;
+    width: 6.25rem;
+    margin-bottom: 1.5625rem;
   }
 
   .task-name {
-    padding: 8px;
-    border-radius: 8px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
   }
 
   /* Show the small '+' in the nav */
@@ -583,11 +583,11 @@ html.dark .modal {
     justify-content: center;
     color: var(--white);
     background-color: var(--main-purple);
-    padding: 15px 20px;
+    padding: 0.9375rem 1.25rem;
     border-radius: 50%;
-    margin-right: 20px;
-    margin-top: 20px;
-    border: 1px solid var(--white);
+    margin-right: 1.25rem;
+    margin-top: 1.25rem;
+    border: 0.0625rem solid var(--white);
   }
 
   .task-grid {
@@ -598,86 +598,53 @@ html.dark .modal {
 
   .modal {
     background-color: var(--white);
-    width: 280px;
-    height: 480px;
-    padding: 10px 30px 30px 10px;
+    width: 17.5rem;
+    height: 30rem;
+    padding: 0.625rem 1.875rem 1.875rem 0.625rem;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 10px;
+    border-radius: 0.625rem;
   }
 
   .update-task-buttons {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0.5rem;
   }
 }
 
-@media (min-width: 821px) and (max-width: 1024px) {
+@media (min-width: 51.3125rem) and (max-width: 64rem) {
   html,
   body {
     height: 100%;
     margin: 0;
     overflow: auto;
-  }
-  .main-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
   }
 
   .new-task-button {
     left: 80%;
   }
 
-  .navigation-bar {
-    grid-column: span 1;
-  }
-
-  .task-bar {
-    grid-column: span 3;
-  }
-
   .btn-primary {
-    left: -15%;
+    left: -30%;
+    padding: 0.9375rem 5.625rem;
   }
   .toggle-label {
-    margin-top: 450px;
-    right: 7%;
+    margin-top: 28.125rem;
+    right: 5%;
+    padding: 0.625rem 1.875rem 0.3125rem 1.875rem;
   }
   .hide-sidebar {
-    margin-top: 510px;
-    padding: 20px 90px;
+    margin-top: 31.875rem;
+    left: -25%;
+    padding: 0.9375rem 5.625rem;
   }
-  .task-grid {
-    height: 100%;
-  }
-}
-
-@media (width: 1280px) {
-  html,
-  body {
-    height: 100%;
-    margin: 0;
-    overflow: auto;
-  }
-  .main-grid {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
+  .toggle-label::after {
+    right: 3.75rem;
   }
 
-  .navigation-bar {
-    grid-column: span 2;
-  }
-
-  .task-bar {
-    grid-column: span 6;
-  }
-
-  .toggle-label {
-    right: 17%;
-  }
   .task-grid {
     height: 100%;
   }
