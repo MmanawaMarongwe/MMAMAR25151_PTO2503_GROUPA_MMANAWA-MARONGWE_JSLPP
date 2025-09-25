@@ -1,11 +1,16 @@
 import { arrangeTask } from "./arrangeTask.js";
 import { createTask } from "./createTask.js";
 import { getData } from "./api.js";
-import { prioritizeTasks } from "./taskPriority.js";
 
 if (!localStorage.getItem("tasks")) {
   await getData();
 }
+
+const priorityOrder = {
+  high: 1,
+  medium: 2,
+  low: 3,
+};
 
 /**
  * Retrieves the list of tasks from localStorage.
@@ -28,6 +33,7 @@ export const tasks = getTasks();
  */
 export function renderTasks() {
   const tasks = getTasks();
+  tasks.sort((a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]);
   document.getElementById("todo-list").innerHTML = "";
   document.getElementById("doing-list").innerHTML = "";
   document.getElementById("done-list").innerHTML = "";

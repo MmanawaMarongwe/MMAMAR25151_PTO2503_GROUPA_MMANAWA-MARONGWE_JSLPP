@@ -1,6 +1,5 @@
 import { displayTaskInModal } from "./updateTaskModal.js";
 import { countTasks } from "./taskCounter.js";
-import { prioritizeTasks } from "./taskPriority.js";
 
 /**
  * Creates a task card element containing the task title
