@@ -3,6 +3,7 @@ import { renderTasks, getTasks } from "./userInterface.js";
 const modalTitle = document.getElementById("new-task");
 const modalDesc = document.getElementById("new-task-description");
 const modalStatus = document.getElementById("new-task-status");
+const modalPriority = document.getElementById("new-task-priority");
 export const addTaskBtn = document.getElementById("create-btn");
 const tasks = getTasks();
 /**
@@ -40,11 +41,13 @@ export function AddNewTask() {
   let newTaskTitle = modalTitle.value;
   let newTaskDesc = modalDesc.value;
   let newTaskStatus = modalStatus.value;
+  let newTaskPriority = modalPriority.value;
 
   let newTask = {
     id: getNextId(),
     title: newTaskTitle,
     description: newTaskDesc,
+    priority: newTaskPriority,
     status: newTaskStatus,
   };
 
