@@ -1,8 +1,9 @@
-import { initialTasks } from "./initialData.js";
 import { arrangeTask } from "./arrangeTask.js";
 import { createTask } from "./createTask.js";
+import { getData } from "./api.js";
+
 if (!localStorage.getItem("tasks")) {
-  localStorage.setItem("tasks", JSON.stringify(initialTasks));
+  await getData();
 }
 
 /**
