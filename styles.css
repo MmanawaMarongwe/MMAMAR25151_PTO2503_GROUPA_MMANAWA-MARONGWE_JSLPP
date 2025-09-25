@@ -299,6 +299,10 @@ h2 .task-grid-header {
   box-shadow: 0 6px 12px #364e7e33;
 }
 
+/* ===============================
+     MODAL STYLING
+   =============================== */
+
 button:hover {
   background-color: var(--hover-purple);
 }
@@ -307,7 +311,7 @@ button:hover {
 input,
 select,
 .create-button {
-  margin: 10px 20px 10px 10px;
+  margin: 10px 20px 5px 10px;
 }
 
 textarea {
@@ -323,7 +327,7 @@ select {
   height: auto; /* natural height for a single-line input */
   width: 100%; /* full width */
   text-transform: lowercase;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 option,
@@ -392,7 +396,7 @@ input {
 .modal {
   background-color: var(--white);
   width: 400px;
-  height: 400px;
+  height: 450px;
   padding: 10px 30px 30px 10px;
   position: absolute;
   left: 50%;
