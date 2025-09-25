@@ -62,6 +62,24 @@ p {
   font-size: 0.875rem;
 }
 
+html,
+body,
+.navigation-bar,
+.task-grid,
+.task-name,
+button,
+input,
+select,
+textarea,
+.modal {
+  transition: background-color 180ms ease, color 180ms ease,
+    border-color 180ms ease;
+}
+
+.logo img {
+  transition: opacity 180ms ease;
+}
+
 .main-grid {
   min-height: 100vh;
   display: grid;
@@ -128,7 +146,7 @@ p {
 .toggle-label {
   position: absolute;
   display: inline-block;
-  right: 20%;
+  left: -1%;
   background-color: var(--light-grey);
   padding: 0.625rem 3.75rem 0.3125rem 2.5rem;
   width: 9.375rem;
@@ -194,10 +212,12 @@ p {
 
 .circle input:checked + .slider {
   background-color: var(--dark-grey);
+  transition: none;
 }
 
 .circle input:checked + .slider:before {
   transform: translateX(1.875rem);
+  transition: none;
 }
 
 .open-sidebar {
@@ -505,7 +525,10 @@ html.dark .modal {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.875rem;
+    padding-bottom: 30px;
+  }
+  .task-bar {
+    margin-top: 30px;
   }
 
   /* Hide the menu content by default on mobile */
@@ -516,8 +539,8 @@ html.dark .modal {
   /* When nav is open, show it as a floating sheet */
   .navigation-bar.nav-open .nav-content {
     display: block;
-    position: fixed; /* float above content */
-    top: 4rem; /* adjust to your header height */
+    position: fixed;
+    top: 4rem;
     left: 50%;
     transform: translateX(-50%);
     width: 18.75rem;
@@ -537,6 +560,7 @@ html.dark .modal {
   /* Relax clipping only when open */
   .navigation-bar.nav-open {
     overflow: visible;
+    max-height: 4rem;
   }
 
   #nav-menu-overlay {
@@ -545,7 +569,7 @@ html.dark .modal {
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.5); /* dim effect */
-    z-index: 500; /* higher than task cards */
+    z-index: 700; /* higher than task cards */
   }
 
   /* When "open" */
@@ -633,7 +657,7 @@ html.dark .modal {
   }
   .toggle-label {
     margin-top: 28.125rem;
-    right: 5%;
+    right: 15%;
     padding: 0.625rem 1.875rem 0.3125rem 1.875rem;
   }
   .hide-sidebar {
@@ -642,10 +666,16 @@ html.dark .modal {
     padding: 0.9375rem 5.625rem;
   }
   .toggle-label::after {
-    right: 3.75rem;
+    right: 3.25rem;
   }
 
   .task-grid {
     height: 100%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .toggle-label {
+    right: 10%;
   }
 }
