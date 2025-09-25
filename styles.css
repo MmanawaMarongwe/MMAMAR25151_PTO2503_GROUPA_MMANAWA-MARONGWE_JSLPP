@@ -112,6 +112,7 @@ textarea,
 
 .btn-primary {
   position: absolute;
+  width: 17.25rem;
   left: -10%;
   color: var(--white);
   font-size: 0.9375rem;
@@ -123,6 +124,7 @@ textarea,
 
 .hide-sidebar {
   position: absolute;
+  width: 17.25rem;
   color: var(--main-purple);
   left: -10%;
   font-size: 0.9375rem;
@@ -149,7 +151,7 @@ textarea,
   left: -1%;
   background-color: var(--light-grey);
   padding: 0.625rem 3.75rem 0.3125rem 2.5rem;
-  width: 9.375rem;
+  width: 15.6875rem;
   height: 2.1875rem;
   margin-top: 23.75rem;
   border-radius: 0.3125rem;
@@ -264,6 +266,7 @@ h2 .task-grid-header {
 
 .new-task-button {
   position: absolute;
+  width: 10.25rem;
   left: 85%;
   color: var(--white);
   background-color: var(--main-purple);
