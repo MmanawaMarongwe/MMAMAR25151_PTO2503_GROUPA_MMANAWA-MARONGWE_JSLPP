@@ -129,7 +129,7 @@ textarea,
   left: -10%;
   font-size: 0.9375rem;
   background-color: var(--light-grey);
-  padding: 0.9375rem 6.25rem;
+  padding: 3rem 6.25rem;
   border-radius: 3.125rem;
   border: 0.0625rem solid var(--white);
   margin-top: 28.125rem;
@@ -150,7 +150,7 @@ textarea,
   display: inline-block;
   left: -1%;
   background-color: var(--light-grey);
-  padding: 0.625rem 3.75rem 0.3125rem 2.5rem;
+  padding: 0.625rem 4.25rem 0.3125rem 2.5rem;
   width: 15.6875rem;
   height: 2.1875rem;
   margin-top: 23.75rem;
