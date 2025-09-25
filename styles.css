@@ -77,7 +77,7 @@ textarea,
 }
 
 .logo img {
-  transition: opacity 180ms ease;
+  transition: opacity 90ms ease;
 }
 
 .main-grid {
@@ -99,7 +99,7 @@ textarea,
   width: 9.375rem;
   height: 2.5rem; /* lock height */
   object-fit: contain;
-  margin-top: 1.75rem;
+  margin-top: 2rem;
 }
 
 .nav-content {
@@ -130,13 +130,13 @@ textarea,
   padding: 1.25rem 8rem;
   border-radius: 3.125rem;
   border: 0.0625rem solid var(--white);
-  margin-top: 28.125rem;
+  margin-top: 30rem;
 }
 
 .hide-sidebar::before {
   content: "🚫";
   position: absolute;
-  left: 2.5rem;
+  left: 5rem;
   top: 50%;
   transform: translateY(-50%);
   font-size: 1rem;
@@ -148,10 +148,10 @@ textarea,
   display: inline-block;
   left: -1%;
   background-color: var(--light-grey);
-  padding: 0.625rem 3.75rem 0.3125rem 2.5rem;
-  width: 9.375rem;
+  padding: 0.625rem 4rem 0.3125rem 4rem;
+  width: 10.25rem;
   height: 2.1875rem;
-  margin-top: 23.75rem;
+  margin-top: 26rem;
   border-radius: 0.3125rem;
 }
 
@@ -165,7 +165,7 @@ textarea,
   position: absolute;
   cursor: pointer;
   top: 0;
-  left: 30%;
+  left: 35%;
   right: 0;
   bottom: 0;
   background-color: var(--main-purple);
@@ -192,7 +192,7 @@ textarea,
 .toggle-label::before {
   content: "☀️";
   position: absolute;
-  left: 2.5rem;
+  left: 4rem;
   top: 50%;
   transform: translateY(-50%);
   font-size: 1rem;
@@ -203,7 +203,7 @@ textarea,
 .toggle-label::after {
   content: "🌑";
   position: absolute;
-  right: 4.6875rem;
+  right: 5rem;
   top: 50%;
   transform: translateY(-50%);
   font-size: 1rem;
@@ -253,7 +253,8 @@ textarea,
 }
 
 .task-grid-header {
-  padding-top: 0.3125rem;
+  padding-top: 0.5rem;
+  font-weight: 700;
   padding-bottom: 0.3125rem;
   margin-left: 1.5625rem;
 }
@@ -500,7 +501,7 @@ html.dark .modal {
    MOBILE STYLING
    =============================== */
 
-@media (max-width: 51.25rem) {
+@media (max-width: 820px) {
   p {
     font-size: 0.625rem;
   }
@@ -639,7 +640,7 @@ html.dark .modal {
   }
 }
 
-@media (min-width: 51.3125rem) and (max-width: 64rem) {
+@media (min-width: 821px) and (max-width: 1024px) {
   html,
   body {
     height: 100%;
