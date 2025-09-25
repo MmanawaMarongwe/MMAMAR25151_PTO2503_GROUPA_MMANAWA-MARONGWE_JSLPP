@@ -299,6 +299,22 @@ h2 .task-grid-header {
   box-shadow: 0 6px 12px #364e7e33;
 }
 
+.task-name p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* <-- pushes text left, ball right */
+  width: 100%; /* <-- ensures full width */
+  padding-right: 12px;
+}
+
+.status-ball {
+  display: inline-block;
+  width: 12px; /* adjust size */
+  height: 12px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
 /* ===============================
      MODAL STYLING
    =============================== */
@@ -583,7 +599,7 @@ html.dark .modal {
   .modal {
     background-color: var(--white);
     width: 280px;
-    height: 440px;
+    height: 480px;
     padding: 10px 30px 30px 10px;
     position: absolute;
     left: 50%;

@@ -1,6 +1,7 @@
 import { arrangeTask } from "./arrangeTask.js";
 import { createTask } from "./createTask.js";
 import { getData } from "./api.js";
+import { prioritizeTasks } from "./taskPriority.js";
 
 if (!localStorage.getItem("tasks")) {
   await getData();
