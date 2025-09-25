@@ -4,6 +4,7 @@ const modalCloseBtn = document.getElementsByClassName("modal-close")[0];
 const modalTitle = document.getElementById("task-name-field");
 const modalDesc = document.getElementById("task-description");
 const modalStatus = document.getElementById("task-status");
+const modalPriority = document.getElementById("task-priority");
 const saveBtn = document.getElementById("update-task-btn");
 const dltBtn = document.getElementById("delete-task");
 
@@ -20,6 +21,7 @@ export function displayTaskInModal(task) {
   modalTitle.value = task.title || "";
   modalDesc.value = task.description || "";
   modalStatus.value = task.status.toLowerCase() || "todo";
+  modalPriority.value = task.priority.toLowerCase() || "medium";
   modal.style.display = "flex";
 
   saveBtn.addEventListener("click", saveTaskChanges);
@@ -42,6 +44,7 @@ function saveTaskChanges() {
     title: modalTitle.value.trim(),
     description: modalDesc.value.trim(),
     status: modalStatus.value,
+    priority: modalPriority.value,
   };
 
   localStorage.setItem("tasks", JSON.stringify(tasks));

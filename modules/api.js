@@ -1,6 +1,5 @@
-// api.js
 export async function getData() {
-  const url = "https://jsl-kanban-api.vercel.apps";
+  const url = "https://jsl-kanban-api.vercel.app";
   try {
     showTempAlert("Loading tasks…");
     const response = await fetch(url);
@@ -10,9 +9,13 @@ export async function getData() {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    const data = await response.json();
+    let data = await response.json();
     console.log("API data:", data);
-    // Save to localStorage
+
+    data = data.map((task) => ({
+      ...task,
+      priority: "low", // <-- your extra key
+    }));
     localStorage.setItem("tasks", JSON.stringify(data));
 
     return data;
