@@ -9,11 +9,21 @@ const saveBtn = document.getElementById("update-task-btn");
 const dltBtn = document.getElementById("delete-task");
 
 /**
- * Shows the task data inside the modal
+ * Displays task details inside the modal for viewing or editing.
  *
- * @param {{ title: string, description: string, status: string }} task
- *  The task object (status is one of "todo", "doing", "done")
- * @returns {void}
+ * - Sets the modal dataset ID to the task's `id`.
+ * - Populates modal fields (`title`, `description`, `status`, `priority`) with task data.
+ * - Defaults missing fields to safe fallback values.
+ * - Shows the modal by setting its display style to `flex`.
+ * - Attaches click event listeners for saving and deleting the task.
+ *
+ * @param {Object} task - The task object to display.
+ * @param {number} task.id - The unique ID of the task.
+ * @param {string} task.title - The task title.
+ * @param {string} task.description - The task description.
+ * @param {"todo"|"doing"|"done"} task.status - The current task status.
+ * @param {"high"|"medium"|"low"} task.priority - The task priority level.
+ * @returns {void} Does not return a value.
  */
 export function displayTaskInModal(task) {
   modal.dataset.id = task.id;
@@ -32,6 +42,19 @@ modalCloseBtn.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
+/**
+ * Saves changes made to a task from the modal back into storage.
+ *
+ * - Retrieves the task ID from the modal dataset.
+ * - Finds the matching task in the stored tasks array.
+ * - Updates the task's fields (title, description, status, priority)
+ *   with the current modal input values.
+ * - Persists the updated task list to `localStorage`.
+ * - Hides the modal and re-renders the task list in the UI.
+ * - If the task cannot be found, exits without changes.
+ *
+ * @returns {void} Does not return a value.
+ */
 function saveTaskChanges() {
   const id = Number(modal.dataset.id);
   const tasks = getTasks();
@@ -53,6 +76,22 @@ function saveTaskChanges() {
   renderTasks();
 }
 
+/**
+ * Deletes a task from storage and updates the UI.
+ *
+ * - Retrieves the task ID from the modal dataset.
+ * - Locates the matching task in the stored tasks array.
+ * - Prompts the user with a confirmation dialog.
+ *   - If not confirmed, closes the modal without changes.
+ * - If confirmed:
+ *   - Removes the task from the array.
+ *   - Persists the updated tasks array to `localStorage`.
+ *   - Re-renders the task list in the UI.
+ *   - Hides the modal after completion.
+ * - If the task is not found, exits without making changes.
+ *
+ * @returns {void} Does not return a value.
+ */
 function deleteTask() {
   const id = Number(modal.dataset.id);
   let tasks = getTasks();

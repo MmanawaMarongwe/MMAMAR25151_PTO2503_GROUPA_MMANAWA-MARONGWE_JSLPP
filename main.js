@@ -20,7 +20,7 @@ import {
   mToggle,
   openNav,
   clsMToggle,
-} from "./modules/openNavbar.js";
+} from "./modules/openMobToggle.js";
 
 if (openMToggle) {
   openMToggle.addEventListener("click", () => {

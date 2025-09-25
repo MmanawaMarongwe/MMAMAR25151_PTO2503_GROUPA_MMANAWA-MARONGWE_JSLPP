@@ -2,12 +2,22 @@ import { displayTaskInModal } from "./updateTaskModal.js";
 import { countTasks } from "./taskCounter.js";
 
 /**
- * Creates a task card element containing the task title
- * and sets up an event listener to display the task in a modal.
+ * Creates a task card element for display in the task board.
  *
- * @param {object} task -
- *   The task object containing a title, description and status.
- * @returns {HTMLDivElement} The created task card element with the title inside a <p>.
+ * - Builds a container `<div>` with the task title and a colored status ball.
+ * - The status ball color reflects the task's priority:
+ *   - Red for "high"
+ *   - Orange for "medium"
+ *   - Green for "low"
+ * - Calls `countTasks()` to update task counters.
+ * - Attaches a click event listener to open the task in a modal view.
+ *
+ * @param {Object} task - The task object.
+ * @param {string} task.title - The title of the task.
+ * @param {string} task.description - The description of the task.
+ * @param {string} task.status - The status of the task (e.g., `"todo"`, `"doing"`, `"done"`).
+ * @param {("high"|"medium"|"low")} task.priority - The priority level of the task.
+ * @returns {HTMLDivElement} The created task card element containing the task title and status indicator.
  */
 export function createTask(task) {
   const taskCard = document.createElement("div");

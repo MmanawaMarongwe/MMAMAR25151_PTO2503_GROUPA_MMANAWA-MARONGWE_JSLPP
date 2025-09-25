@@ -3,6 +3,15 @@ const navBar = document.getElementById("nav-bar");
 export const opnNavBarBtn = document.getElementById("open-sidebar-btn");
 const mainGrid = document.getElementById("main-container");
 
+/**
+ * Toggles the sidebar to hidden state.
+ *
+ * - Updates `clsNavBarBtn` classes to indicate the sidebar is hidden.
+ * - Hides the `navBar` and adjusts `mainGrid` layout.
+ * - Ensures the open-sidebar button (`opnNavBarBtn`) becomes visible.
+ *
+ * @returns {void} Does not return a value.
+ */
 export const hideSidebar = () => {
   if (clsNavBarBtn.classList.contains("hide-sidebar")) {
     clsNavBarBtn.classList.remove("hide-sidebar");
@@ -27,6 +36,15 @@ export const hideSidebar = () => {
   }
 };
 
+/**
+ * Toggles the sidebar to visible state.
+ *
+ * - Updates `clsNavBarBtn` classes to indicate the sidebar is visible.
+ * - Displays the `navBar` and expands `mainGrid` layout.
+ * - Hides the open-sidebar button (`opnNavBarBtn`).
+ *
+ * @returns {void} Does not return a value.
+ */
 export function openSidebar() {
   if (navBar.classList.contains("navigation-bar")) {
     mainGrid.style.gridTemplateColumns = "repeat(8, 1fr)";

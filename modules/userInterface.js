@@ -28,8 +28,16 @@ export function getTasks() {
 export const tasks = getTasks();
 
 /**
- * Loops through all task objects in the array and renders them on the page
- * @returns {HTMLDivElement} - The created task card
+ * Renders all tasks onto the page in their respective columns.
+ *
+ * - Retrieves the task list from storage using `getTasks()`.
+ * - Sorts tasks by priority (high → medium → low).
+ * - Clears the existing content in the `todo`, `doing`, and `done` lists.
+ * - Creates a task card for each task using {@link createTask}.
+ * - Places each card in the correct column using `arrangeTask`.
+ *
+ * @function
+ * @returns {HTMLDivElement} taskCard - The created task card
  */
 export function renderTasks() {
   const tasks = getTasks();
