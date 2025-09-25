@@ -15,27 +15,23 @@ const tasks = getTasks();
  * @returns {number} The ID value for the next task to be added.
  */
 function getNextId() {
-  //get the last object in the array and use it to get the next id
   const lastObject = tasks[tasks.length - 1];
   const lastId = lastObject.id;
   const nextId = lastId + 1;
-
-  //return the next id so it can be used for the next object
   return nextId;
 }
 
 /**
- * Creates a new task from modal input fields and adds it to the tasks list.
+ * Creates and adds a new task from modal input fields.
  *
- * The function:
- * - Reads the task title, description, and status from modal input fields.
- * - Generates a new unique task ID using `getNextId()`.
- * - Pushes the new task object into the global `tasks` array.
- * - Saves the updated tasks array to `localStorage`.
- * - Re-renders the task list in the UI using `renderTasks()`.
- * - Clears the modal input fields after submission.
- *
- * @returns {void} Does not return a value.
+ * Steps performed:
+ * - Reads task details (title, description, status, and priority) from modal inputs.
+ * - Generates a new unique `id` using  getNextId function.
+ * - Builds a new task object and pushes it to the global `tasks` array.
+ * - Persists the updated task list in `localStorage`.
+ * - Calls `renderTasks()` to refresh the UI.
+ * - Clears modal input fields for future use.
+ * @returns {void} This function does not return a value.
  */
 export function AddNewTask() {
   let newTaskTitle = modalTitle.value;
