@@ -112,24 +112,22 @@ textarea,
 
 .btn-primary {
   position: absolute;
-  width: 17.25rem;
   left: -10%;
   color: var(--white);
   font-size: 0.9375rem;
   background-color: var(--main-purple);
-  padding: 1.25rem 6.25rem;
+  padding: 1.25rem 8rem;
   border-radius: 6.25rem;
   border: 0.0625rem solid var(--white);
 }
 
 .hide-sidebar {
   position: absolute;
-  width: 17.25rem;
   color: var(--main-purple);
   left: -10%;
   font-size: 0.9375rem;
   background-color: var(--light-grey);
-  padding: 3rem 6.25rem;
+  padding: 1.25rem 8rem;
   border-radius: 3.125rem;
   border: 0.0625rem solid var(--white);
   margin-top: 28.125rem;
@@ -150,8 +148,8 @@ textarea,
   display: inline-block;
   left: -1%;
   background-color: var(--light-grey);
-  padding: 0.625rem 4.25rem 0.3125rem 2.5rem;
-  width: 15.6875rem;
+  padding: 0.625rem 3.75rem 0.3125rem 2.5rem;
+  width: 9.375rem;
   height: 2.1875rem;
   margin-top: 23.75rem;
   border-radius: 0.3125rem;
@@ -266,7 +264,6 @@ h2 .task-grid-header {
 
 .new-task-button {
   position: absolute;
-  width: 10.25rem;
   left: 85%;
   color: var(--white);
   background-color: var(--main-purple);
