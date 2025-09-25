@@ -253,14 +253,14 @@ textarea,
 }
 
 .task-grid-header {
-  padding-top: 0.5rem;
-  font-weight: 700;
-  padding-bottom: 0.3125rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1rem;
   margin-left: 1.5625rem;
 }
 
 h2 .task-grid-header {
   color: var(--very-dark-grey);
+  font-weight: 700;
 }
 
 .new-task-button {
