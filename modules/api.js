@@ -17,11 +17,5 @@ export async function getData() {
     return data;
   } catch (error) {
     console.error("Failed to fetch tasks:", error);
-
-    // fallback
-    localStorage.setItem("tasks", JSON.stringify([]));
-    return [];
   }
 }
-
-getData();
