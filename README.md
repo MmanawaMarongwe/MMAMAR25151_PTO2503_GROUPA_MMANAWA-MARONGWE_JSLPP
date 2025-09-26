@@ -5,7 +5,7 @@ This Kanban app is a **task management tool** built with HTML, CSS, and JavaScri
 
 ## 🔗 Live Demo  
 👉 [View the deployed app](https://kanbantaskboardmanagement.netlify.app/)  
-👉 [Watch project presentation](https://docs.google.com/videos/d/1ol2MzbE824VQS8OAtLeJQTT_ByWxflsBZET40sas8wo/edit?scene=id.p#scene=id.p))  
+👉 [Watch project presentation](https://docs.google.com/videos/d/1BAKUUsO9qYidY_UNRJ9wWEjSGjt02u7f2MCZHV2L3DE/edit?usp=sharing)  
 
 ## ✨ Features  
 - **Dynamic Task Management**: Create, edit, and delete tasks directly from the board.  
