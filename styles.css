@@ -265,10 +265,10 @@ h2 .task-grid-header {
 
 .new-task-button {
   position: absolute;
-  left: 85%;
+  left: 83%;
   color: var(--white);
   background-color: var(--main-purple);
-  padding: 0.9375rem 1.5625rem;
+  padding: 1.5rem 3.25rem;
   border-radius: 3.125rem;
   border: 0.0625rem solid var(--white);
 }
