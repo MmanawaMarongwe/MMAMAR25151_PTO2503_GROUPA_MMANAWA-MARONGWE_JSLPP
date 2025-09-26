@@ -73,6 +73,9 @@ function saveTaskChanges() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
   console.log(tasks);
   modal.style.display = "none";
+  document.getElementById("todo-list").innerHTML = "";
+  document.getElementById("doing-list").innerHTML = "";
+  document.getElementById("done-list").innerHTML = "";
   renderTasks();
 }
 
@@ -107,6 +110,9 @@ function deleteTask() {
 
   tasks = tasks.filter((task) => task.id !== id);
   localStorage.setItem("tasks", JSON.stringify(tasks));
+  document.getElementById("todo-list").innerHTML = "";
+  document.getElementById("doing-list").innerHTML = "";
+  document.getElementById("done-list").innerHTML = "";
   renderTasks();
   console.log(tasks);
   modal.style.display = "none";

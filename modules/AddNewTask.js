@@ -49,6 +49,9 @@ export function AddNewTask() {
 
   tasks.push(newTask);
   localStorage.setItem("tasks", JSON.stringify(tasks));
+  document.getElementById("todo-list").innerHTML = "";
+  document.getElementById("doing-list").innerHTML = "";
+  document.getElementById("done-list").innerHTML = "";
   renderTasks();
 
   modalTitle.value = "";

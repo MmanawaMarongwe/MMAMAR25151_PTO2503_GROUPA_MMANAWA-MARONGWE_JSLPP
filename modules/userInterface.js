@@ -11,7 +11,6 @@ const priorityOrder = {
 if (!localStorage.getItem("tasks")) {
   getData();
 }
-renderTasks();
 
 /**
  * Retrieves the list of tasks from localStorage.
@@ -43,12 +42,9 @@ export const tasks = getTasks();
 export function renderTasks() {
   const tasks = getTasks();
   tasks.sort((a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]);
-  document.getElementById("todo-list").innerHTML = "";
-  document.getElementById("doing-list").innerHTML = "";
-  document.getElementById("done-list").innerHTML = "";
+
   tasks.forEach((task) => {
     const taskCard = createTask(task);
     arrangeTask(task, taskCard);
-    return taskCard;
   });
 }
