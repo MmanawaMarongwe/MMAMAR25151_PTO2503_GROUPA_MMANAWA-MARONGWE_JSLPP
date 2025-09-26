@@ -229,18 +229,18 @@ textarea,
   position: absolute;
   color: var(--white);
   left: -3%;
-  background-color: var(--light-lines);
-  padding: 1.5625rem 3.125rem;
+  background-color: var(--hover-purple);
+  padding: 1.5625rem 4rem;
   border-radius: 3.125rem;
   border: 0.0625rem solid var(--white);
-  margin-top: 31.25rem;
+  margin-top: 36 rem;
   overflow: hidden;
 }
 
 .open-sidebar::before {
   content: "👀";
   position: absolute;
-  left: 2.5rem;
+  left: 3.35rem;
   top: 50%;
   transform: translateY(-50%);
   font-size: 1rem;
