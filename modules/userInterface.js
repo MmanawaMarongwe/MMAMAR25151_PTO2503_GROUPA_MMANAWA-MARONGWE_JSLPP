@@ -9,7 +9,7 @@ const priorityOrder = {
 };
 
 if (!localStorage.getItem("tasks")) {
-  getData();
+  await getData();
 }
 
 /**
