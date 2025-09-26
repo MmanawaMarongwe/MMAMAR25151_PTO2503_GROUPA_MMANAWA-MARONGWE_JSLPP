@@ -22,6 +22,10 @@ import {
   clsMToggle,
 } from "./modules/openMobToggle.js";
 
+document.documentElement.classList.add("preload");
+window.addEventListener("DOMContentLoaded", () =>
+  document.documentElement.classList.remove("preload")
+);
 if (openMToggle) {
   openMToggle.addEventListener("click", () => {
     if (mToggle.classList.contains("nav-open")) closeNav();
