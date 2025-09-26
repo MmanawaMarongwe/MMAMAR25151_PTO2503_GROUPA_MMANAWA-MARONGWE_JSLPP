@@ -99,7 +99,7 @@ textarea,
   width: 9.375rem;
   height: 2.5rem; /* lock height */
   object-fit: contain;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .nav-content {
