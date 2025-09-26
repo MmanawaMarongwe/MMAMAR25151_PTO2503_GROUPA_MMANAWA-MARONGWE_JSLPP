@@ -191,21 +191,5 @@
         </div>
       </div>
     </div>
-
-    <script>
-      (function () {
-        var saved = localStorage.getItem("theme");
-        var logo = document.getElementById("img-logo");
-        if (
-          saved === "dark" ||
-          (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches)
-        ) {
-          document.documentElement.classList.add("dark");
-          if (logo) logo.src = "assets/logo-dark.svg";
-        } else {
-          if (logo) logo.src = "assets/logo-light.svg";
-        }
-      })();
-    </script>
   </body>
 </html>
