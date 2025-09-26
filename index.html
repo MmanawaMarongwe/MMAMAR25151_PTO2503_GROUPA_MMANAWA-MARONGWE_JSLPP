@@ -15,6 +15,21 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        var logo = document.getElementById("img-logo");
+        if (
+          saved === "dark" ||
+          (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+          document.documentElement.classList.add("dark");
+          if (logo) logo.src = "assets/logo-dark.svg";
+        } else {
+          if (logo) logo.src = "assets/logo-light.svg";
+        }
+      })();
+    </script>
     <script src="main.js" type="module" defer></script>
   </head>
 
