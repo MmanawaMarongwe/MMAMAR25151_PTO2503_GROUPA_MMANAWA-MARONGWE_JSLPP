@@ -57,5 +57,5 @@ export function AddNewTask() {
   modalTitle.value = "";
   modalDesc.value = "";
   modalStatus.value = "todo";
-  modalPriority = "medium";
+  modalPriority.value = "medium";
 }
