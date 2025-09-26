@@ -2,15 +2,16 @@ import { arrangeTask } from "./arrangeTask.js";
 import { createTask } from "./createTask.js";
 import { getData } from "./api.js";
 
-if (!localStorage.getItem("tasks")) {
-  await getData();
-}
-
 const priorityOrder = {
   high: 1,
   medium: 2,
   low: 3,
 };
+
+if (!localStorage.getItem("tasks")) {
+  await getData();
+}
+renderTasks();
 
 /**
  * Retrieves the list of tasks from localStorage.
