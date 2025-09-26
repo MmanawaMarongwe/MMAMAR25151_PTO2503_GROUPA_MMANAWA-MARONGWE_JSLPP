@@ -526,10 +526,7 @@ html.dark .modal {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 30px;
-  }
-  .task-bar {
-    margin-top: 30px;
+    padding: 30px;
   }
 
   /* Hide the menu content by default on mobile */
@@ -561,21 +558,29 @@ html.dark .modal {
   /* Relax clipping only when open */
   .navigation-bar.nav-open {
     overflow: visible;
-    max-height: 4rem;
+    max-height: 3rem;
+  }
+
+  .logo {
+    height: 100px;
   }
 
   #nav-menu-overlay {
     display: none; /* or visibility: hidden */
-    position: absolute; /* covers only its parent */
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.5); /* dim effect */
-    z-index: 700; /* higher than task cards */
   }
 
-  /* When "open" */
   #nav-menu-overlay.is-open {
     display: block;
+    position: absolute; /* covers only its parent */
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* dim effect */
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .task-bar {
+    position: relative;
+    margin-top: 30px;
   }
 
   .toggle-label {
@@ -588,9 +593,13 @@ html.dark .modal {
 
   img.mobile-logo {
     display: flex;
+    position: absolute;
+    right: 60%;
+    top: 0;
     margin-left: 0;
+    margin-top: 0;
+    padding: 30px;
     width: 6.25rem;
-    margin-bottom: 1.5625rem;
   }
 
   .task-name {
