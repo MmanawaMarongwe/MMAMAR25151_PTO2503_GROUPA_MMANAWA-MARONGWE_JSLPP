@@ -20,6 +20,10 @@ body {
   overflow: hidden;
 }
 
+button {
+  cursor: pointer;
+}
+
 h4,
 h3,
 h2,
